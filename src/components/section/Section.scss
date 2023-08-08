@@ -1,0 +1,25 @@
+@use "../modules/mixins" as mxs;
+
+section {
+    @include mxs.colFlex(space-evenly, start);
+    width: 65%;
+    margin: 0 auto;
+    padding-block: var(--my-value-mid);
+
+    h2 {
+        width: fit-content;
+        margin: 0 auto;
+        padding: var(--my-value-min) var(--my-value-mid) calc(var(--my-value-min) + 1px);
+        background-color: var(--my-color-black);
+        color: var(--my-color-white);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: var(--my-font-size-h2);
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    img, iframe {
+        width: 100%;
+        aspect-ratio: 5/3;
+    }
+}

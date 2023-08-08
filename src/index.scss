@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Inconsolata', monospace;
+    src: url("/fonts/Inconsolata-VariableFont_wdth\,wght.ttf");
+}
+
+:root {
+    // values
+    --my-value-min: 2px;
+    --my-value-mid: 10px;
+    --my-value-max: 20px;
+
+    // fonts
+    --my-font-family: 'Inconsolata', monospace;
+    --my-font-size-h1: clamp(60px, 10vw, 90px);
+    --my-font-size-h2: clamp(17px, 2vw, 21px);
+    --my-font-size-p: clamp(14px, 2vw, 17px);
+
+    // colors
+    --my-color-main: rgb(247,245,242);
+    --my-color-black: rgb(0, 0, 0);
+    --my-color-white: rgb(255, 255, 255);
+    --my-color-greyLight: rgb(240, 240, 240);
+    --my-color-greyMid: rgb(215, 215, 215);
+    --my-color-greyDark: rgb(120, 120, 120);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--my-font-family);
+}
+
+main {
+    width: min(100%, 1220px);
+    margin: 0 auto;
+    background-color: var(--my-color-main);
+}

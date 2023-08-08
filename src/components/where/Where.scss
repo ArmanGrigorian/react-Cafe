@@ -1,0 +1,42 @@
+@use "../modules/mixins" as mxs;
+
+.where {
+
+    p {
+        padding-block: var(--my-value-max);
+        font-size: var(--my-font-size-p);
+        margin-top: var(--my-value-mid);
+
+        span {
+            margin-right: var(--my-value-mid);
+            background-color: var(--my-color-black);
+            color: var(--my-color-white);
+            padding: calc(var(--my-value-min) * 2);
+        }
+    }
+
+    form{
+        padding-bottom: var(--my-value-max);
+        
+        fieldset{
+            border: none;
+            @include mxs.colFlex(space-between, stretch, 10px);
+
+            legend{
+                font-size: var(--my-font-size-p);
+                padding-bottom: var(--my-value-mid);
+            }
+
+            input{
+                padding: var(--my-value-mid);
+                font-size: var(--my-font-size-p);
+
+                &[type="submit"]{
+                    width: max(130px, 30%);
+                    color: var(--my-color-white);
+                    background-color: var(--my-color-black);
+                }
+            }
+        }
+    }
+}

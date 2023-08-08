@@ -1,0 +1,32 @@
+.about {
+    height: 1180px;
+
+    p {
+        text-align: justify;
+        font-size: var(--my-font-size-p);
+    }
+
+    div {
+
+        &:first-of-type {
+            background-color: var(--my-color-greyLight);
+            border-left: 6px solid var(--my-color-greyDark);
+
+            p {
+                padding: var(--my-value-max);
+
+                &:first-of-type {
+                    font-style: italic;
+                    padding-bottom: 0px;
+                }
+            }
+        }
+
+        &:last-of-type {
+            p {
+                padding-bottom: var(--my-value-max);
+            }
+        }
+
+    }
+}

@@ -1,0 +1,36 @@
+@use "../modules/mixins" as mxs;
+
+header{
+    @include mxs.rowFlex(space-between, end);
+    background-image: url("/img/theCafeMain.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 720px;
+    filter: grayscale(0.6);
+
+    h1{
+        align-self: center;
+        text-align: center;
+        line-height: 130px;
+        font-size: var(--my-font-size-h1);
+        font-weight: 400;
+        color: var(--my-color-white);
+    }
+
+    p{
+        margin-bottom: var(--my-value-mid);
+        padding: var(--my-value-min) calc(var(--my-value-min) * 4);
+        color: var(--my-color-white);
+        font-size: var(--my-font-size-p);
+        
+        &:first-of-type{
+            background-color: var(--my-color-black);
+            margin-left: clac(var(--my-value-mid) / 2);
+        }
+
+        &:last-of-type{
+            margin-right: clac(var(--my-value-mid) / 2);
+        }
+    }
+}
